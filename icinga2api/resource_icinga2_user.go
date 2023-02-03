@@ -3,8 +3,8 @@ package icinga2
 import (
 	"fmt"
 
-	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/cnanaaron/go-icinga2-api/iapi"
+	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 )
 
 func resourceIcinga2User() *schema.Resource {

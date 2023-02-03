@@ -1,4 +1,4 @@
-module github.com/cnanaaron/terraform-provider-icinga2
+module github.com/cnanaaron/terraform-provider-icinga2api
 
 require (
 	github.com/hashicorp/terraform-plugin-sdk/v2 v2.21.0

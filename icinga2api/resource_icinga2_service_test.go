@@ -5,9 +5,9 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/cnanaaron/go-icinga2-api/iapi"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	"github.com/cnanaaron/go-icinga2-api/iapi"
 )
 
 func TestAccCreateService(t *testing.T) {

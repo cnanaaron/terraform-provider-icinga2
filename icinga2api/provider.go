@@ -1,4 +1,4 @@
-package icinga2
+package icinga2api
 
 import (
 	"fmt"
@@ -6,8 +6,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/cnanaaron/go-icinga2-api/iapi"
+	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 )
 
 func Provider() *schema.Provider {
@@ -39,13 +39,13 @@ func Provider() *schema.Provider {
 			},
 		},
 		ResourcesMap: map[string]*schema.Resource{
-			"icinga2_endpoint":     resourceIcinga2Endpoint(),
-			"icinga2_host":         resourceIcinga2Host(),
-			"icinga2_hostgroup":    resourceIcinga2Hostgroup(),
-			"icinga2_checkcommand": resourceIcinga2Checkcommand(),
-			"icinga2_service":      resourceIcinga2Service(),
-			"icinga2_user":         resourceIcinga2User(),
-			"icinga2_notification": resourceIcinga2Notification(),
+			"icinga2api_endpoint":     resourceIcinga2Endpoint(),
+			"icinga2api_host":         resourceIcinga2Host(),
+			"icinga2api_hostgroup":    resourceIcinga2Hostgroup(),
+			"icinga2api_checkcommand": resourceIcinga2Checkcommand(),
+			"icinga2api_service":      resourceIcinga2Service(),
+			"icinga2api_user":         resourceIcinga2User(),
+			"icinga2api_notification": resourceIcinga2Notification(),
 		},
 		ConfigureFunc: configureProvider,
 	}

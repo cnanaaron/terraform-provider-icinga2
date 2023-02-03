@@ -3,8 +3,8 @@ package icinga2
 import (
 	"fmt"
 
-	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/cnanaaron/go-icinga2-api/iapi"
+	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 )
 
 func resourceIcinga2Endpoint() *schema.Resource {
@@ -14,7 +14,7 @@ func resourceIcinga2Endpoint() *schema.Resource {
 		Read:   resourceIcinga2EndpointRead,
 		Delete: resourceIcinga2EndpointDelete,
 		Schema: map[string]*schema.Schema{
-			"name": {
+			"endpointname": {
 				Type:        schema.TypeString,
 				Required:    true,
 				Description: "Endpoint name",
