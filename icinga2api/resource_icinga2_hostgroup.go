@@ -3,7 +3,7 @@ package icinga2api
 import (
 	"fmt"
 
-	"github.com/cnanaaron/terraform-provider-icinga2/iapi"
+	"github.com/cnanaaron/terraform-provider-icinga2api/iapi"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 )
 
