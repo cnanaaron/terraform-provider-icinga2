@@ -2,7 +2,6 @@ module github.com/cnanaaron/terraform-provider-icinga2api
 
 require (
 	github.com/hashicorp/terraform-plugin-sdk/v2 v2.21.0
-	github.com/cnanaaron/go-icinga2-api v0.6.5-beta
 )
 
 require (

@@ -1,11 +1,11 @@
-package icinga2
+package icinga2api
 
 import (
 	"fmt"
 	"strings"
 	"testing"
 
-	"github.com/cnanaaron/go-icinga2-api/iapi"
+	"github.com/cnanaaron/terraform-provider-icinga2/iapi"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
 )

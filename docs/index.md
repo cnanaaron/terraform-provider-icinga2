@@ -1,15 +1,15 @@
 ---
-layout: "icinga2"
-page_title: "Provider: Icinga2"
-sidebar_current: "docs-icinga2-index"
+layout: "icinga2api"
+page_title: "Provider: icinga2api"
+sidebar_current: "docs-icinga2api-index"
 description: |-
-  The Icinga2 provider is used to configure hosts to be monitored by Icinga2 servers. The provider needs to be configured with the API URL of the Icinga2 server and credentials for an API user with the appropriate permissions.
+  The icinga2api provider is used to configure hosts to be monitored by Icinga2 servers. The provider needs to be configured with the API URL of the Icinga2 server and credentials for an API user with the appropriate permissions.
 ---
 
 
-# Icinga2 Provider
+# icinga2api Provider
 
-The Icinga2 provider is used to configure hosts to be monitored by
+The icinga2api provider is used to configure hosts to be monitored by
 [Icinga2](https://www.icinga.com/products/icinga-2/) servers. The provider
 needs to be configured with the API URL of the Icinga2 server and credentials
 for an API user with the appropriate permissions.
@@ -17,8 +17,8 @@ for an API user with the appropriate permissions.
 ## Example Usage
 
 ```hcl
-# Configure the Icinga2 provider
-provider "icinga2" {
+# Configure the icinga2api provider
+provider "icinga2api" {
   api_url                  = "https://192.168.33.5:5665/v1"
   api_user                 = "root"
   api_password             = "icinga"
@@ -26,7 +26,7 @@ provider "icinga2" {
 }
 
 # Configure a host
-resource "icinga2_host" "web-server" {
+resource "icinga2api_host" "web-server" {
   # ...
 }
 ```
@@ -36,12 +36,12 @@ resource "icinga2_host" "web-server" {
 ### Static credentials ###
 
 Static credentials can be provided by adding an `api_user` and `api_password` in-line in the
-icinga2 provider block:
+icinga2api provider block:
 
 Usage:
 
 ```hcl
-provider "icinga2" {
+provider "icinga2api" {
   api_url      = "https://192.168.33.5:5665/v1"
   api_user     = "root"
   api_password = "icinga"
@@ -56,7 +56,7 @@ environment variables, storing your Icinga2 API user and password, respectively.
 `ICINGA2_API_URL` and `ICINGA2_INSECURE_SKIP_TLS_VERIFY` are also used, if applicable:
 
 ```hcl
-provider "icinga2" {}
+provider "icinga2api" {}
 ```
 
 Usage:
