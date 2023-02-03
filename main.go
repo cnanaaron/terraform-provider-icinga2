@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/Icinga/terraform-provider-icinga2/icinga2"
+	"github.com/cnanaaron/terraform-provider-icinga2/icinga2"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/plugin"
 )
 

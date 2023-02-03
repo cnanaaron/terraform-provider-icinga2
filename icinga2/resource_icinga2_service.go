@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/lrsmith/go-icinga2-api/iapi"
+	"github.com/cnanaaron/go-icinga2-api/iapi"
 )
 
 func resourceIcinga2Service() *schema.Resource {

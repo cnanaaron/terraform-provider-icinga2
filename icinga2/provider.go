@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/lrsmith/go-icinga2-api/iapi"
+	"github.com/cnanaaron/go-icinga2-api/iapi"
 )
 
 func Provider() *schema.Provider {
@@ -39,6 +39,7 @@ func Provider() *schema.Provider {
 			},
 		},
 		ResourcesMap: map[string]*schema.Resource{
+			"icinga2_endpoint":     resourceIcinga2Endpoint(),
 			"icinga2_host":         resourceIcinga2Host(),
 			"icinga2_hostgroup":    resourceIcinga2Hostgroup(),
 			"icinga2_checkcommand": resourceIcinga2Checkcommand(),

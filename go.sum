@@ -21,6 +21,16 @@ github.com/armon/go-socks5 v0.0.0-20160902184237-e75332964ef5/go.mod h1:wHh0iHkY
 github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=
 github.com/cespare/xxhash/v2 v2.1.1/go.mod h1:VGX0DQ3Q6kWi7AoAeZDth3/j3BFtOZR5XLFGgcrjCOs=
 github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDkc90ppPyw=
+github.com/cnanaaron/go-icinga2-api v0.6.1-beta h1:DArRcaL+1zR5qMoSmuh2aP7J2sQ2DCQW7zzwk+xYcEA=
+github.com/cnanaaron/go-icinga2-api v0.6.1-beta/go.mod h1:8o0Pd4dlQpEVsgmXk5Vw0ooDPOr8bfWus95j32rNwYI=
+github.com/cnanaaron/go-icinga2-api v0.6.2-beta h1:1ZJ5zhmNZ/0Mv66Oe+RlHkde+7yfZyj63WvyaDkwWGQ=
+github.com/cnanaaron/go-icinga2-api v0.6.2-beta/go.mod h1:8o0Pd4dlQpEVsgmXk5Vw0ooDPOr8bfWus95j32rNwYI=
+github.com/cnanaaron/go-icinga2-api v0.6.3-beta h1:kCSaSMXR+NSWH64i0bfGNxbdGLJdQX3YowFsOGZLskQ=
+github.com/cnanaaron/go-icinga2-api v0.6.3-beta/go.mod h1:8o0Pd4dlQpEVsgmXk5Vw0ooDPOr8bfWus95j32rNwYI=
+github.com/cnanaaron/go-icinga2-api v0.6.4-beta h1:r103Z2X/lwByASp0Hz1GfGoue++u6PXi/GBcmPerE+I=
+github.com/cnanaaron/go-icinga2-api v0.6.4-beta/go.mod h1:8o0Pd4dlQpEVsgmXk5Vw0ooDPOr8bfWus95j32rNwYI=
+github.com/cnanaaron/go-icinga2-api v0.6.5-beta h1:0XHOHT1fZxYZG9jvxgPp90zKTcJziMd9hGphjf+h1HA=
+github.com/cnanaaron/go-icinga2-api v0.6.5-beta/go.mod h1:8o0Pd4dlQpEVsgmXk5Vw0ooDPOr8bfWus95j32rNwYI=
 github.com/cncf/udpa/go v0.0.0-20191209042840-269d4d468f6f/go.mod h1:M8M6+tZqaGXZJjfX53e64911xZQV5JYwmTeXPW+k8Sc=
 github.com/cncf/udpa/go v0.0.0-20201120205902-5459f2c99403/go.mod h1:WmhPx2Nbnhtbo57+VJT5O0JRkEi1Wbu0z5j0R8u5Hbk=
 github.com/cncf/udpa/go v0.0.0-20210930031921-04548b0d99d4/go.mod h1:6pvJx4me5XPnfI9Z40ddWsdw2W/uZgQLFXToKeRcDiI=

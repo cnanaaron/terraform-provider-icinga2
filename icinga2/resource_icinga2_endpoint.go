@@ -26,12 +26,12 @@ func resourceIcinga2Endpoint() *schema.Resource {
 				ForceNew: true,
 			},
 			"port": {
-				Type:     schema.TypeNumber,
+				Type:     schema.TypeString,
 				Optional: true,
 				ForceNew: true,
 			},
 			"log_duration": {
-				Type:     schema.TypeString,
+				Type:     schema.TypeInt,
 				Optional: true,
 				ForceNew: true,
 			},
@@ -43,27 +43,27 @@ func resourceIcinga2EndpointCreate(d *schema.ResourceData, meta interface{}) err
 
 	client := meta.(*iapi.Server)
 
-	endpoint := d.Get("endpoint").(string)
+	endpointname := d.Get("endpointname").(string)
 	host := d.Get("host").(string)
-	port := d.Get("port").(int)
-	log_duration := d.Get("log_duration").(string)
+	port := d.Get("port").(string)
+	log_duration := d.Get("log_duration").(int)
 
 	// Call CreateEndpoint with normalized data
-	endpoints, err := client.CreateEndpoint(endpoint, host, port, log_duration)
+	endpoints, err := client.CreateEndpoint(endpointname, host, port, log_duration)
 	if err != nil {
 		return err
 	}
 
 	found := false
 	for _, endpoint := range endpoints {
-		if endpoint.Name == endpoint {
-			d.SetId(endpoint)
+		if endpoint.Name == endpointname {
+			d.SetId(endpointname)
 			found = true
 		}
 	}
 
 	if !found {
-		return fmt.Errorf("Failed to Create Endpoint %s : %s", endpoint, err)
+		return fmt.Errorf("Failed to Create Endpoint %s : %s", endpointname, err)
 	}
 
 	return nil
@@ -73,27 +73,27 @@ func resourceIcinga2EndpointRead(d *schema.ResourceData, meta interface{}) error
 
 	client := meta.(*iapi.Server)
 
-	endpoint := d.Get("endpoint").(string)
+	endpointname := d.Get("endpointname").(string)
 
-	endpoints, err := client.GetEndpoint(endpoint)
+	endpoints, err := client.GetEndpoint(endpointname)
 	if err != nil {
 		return err
 	}
 
 	found := false
 	for _, endpoint := range endpoints {
-		if endpoint.Name == endpoint {
-			d.SetId(endpoint)
+		if endpoint.Name == endpointname {
+			d.SetId(endpointname)
 			_ = d.Set("endpoint", endpoint.Name)
-			_ = d.Set("host", endpoint.Attrs.host)
-			_ = d.Set("port", endpoint.Attrs.port)
-			_ = d.Set("log_duration", endpoint.Attrs.log_duration)
+			_ = d.Set("host", endpoint.Attrs.Host)
+			_ = d.Set("port", endpoint.Attrs.Port)
+			_ = d.Set("log_duration", endpoint.Attrs.LogDuration)
 			found = true
 		}
 	}
 
 	if !found {
-		return fmt.Errorf("Failed to Read Endpoint %s : %s", endpoint, err)
+		return fmt.Errorf("Failed to Read Endpoint %s : %s", endpointname, err)
 	}
 
 	return nil
@@ -103,11 +103,11 @@ func resourceIcinga2EndpointDelete(d *schema.ResourceData, meta interface{}) err
 
 	client := meta.(*iapi.Server)
 
-	endpoint := d.Get("endpoint").(string)
+	endpointname := d.Get("endpointname").(string)
 
-	err := client.DeleteEndpoint(endpoint)
+	err := client.DeleteEndpoint(endpointname)
 	if err != nil {
-		return fmt.Errorf("Failed to Delete Endpoint %s : %s", endpoint, err)
+		return fmt.Errorf("Failed to Delete Endpoint %s : %s", endpointname, err)
 	}
 
 	return nil
